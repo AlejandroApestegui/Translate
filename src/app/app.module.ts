@@ -30,5 +30,5 @@ import { TranslateService } from '@ngx-translate/core';
 export class AppModule { }
 
 export function HttpLoaderFactory(http: HttpClient) {
-  return new TranslateHttpLoader(http);
+  return new TranslateHttpLoader(http, 'https://github.com/AlejandroApestegui/Translate/tree/master/src/assets/i18n/', '.json');
 }
