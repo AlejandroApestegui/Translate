@@ -1,5 +1,7 @@
+import { EjemploService } from './app.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpModule } from "@angular/http";
 
 import { AppComponent } from './app.component';
 
@@ -15,6 +17,7 @@ import { TranslateService } from '@ngx-translate/core';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -24,7 +27,7 @@ import { TranslateService } from '@ngx-translate/core';
       }
     })
   ],
-  providers: [],
+  providers: [EjemploService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
